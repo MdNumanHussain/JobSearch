@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Matcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Matcher</h1>
+        <form>
+            <div class="row">
+                <div class="column">
+                    <label for="cv">Upload CV (DOCX):</label>
+                    <input type="file" id="cv" name="cv" accept=".docx">
+                </div>
+                <div class="column">
+                    <label for="job_description">Paste Job Description:</label>
+                    <textarea id="job_description" name="job_description"></textarea>
+                </div>
+            </div>
+            <button type="button" onclick="processForm()">Match</button>
+        </form>
+        <div class="row">
+            <div class="column">
+                <h3>CV Content:</h3>
+                <pre id="cv_content"></pre>
+            </div>
+            <div class="column">
+                <h3>Job Description:</h3>
+                <pre id="job_description_content"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
