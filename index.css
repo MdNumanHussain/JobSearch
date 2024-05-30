@@ -1,22 +1,23 @@
 body {
     margin: 2em;
+    align-items: left;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 
 .row {
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
 }
 
 .column {
-    flex: 1;
-    margin: 0 1em;
+    flex: 0 0 48%; /* Ensures each column takes up about half the width */
+    margin: 0 1%; /* Adds a small margin between the columns */
 }
 
 textarea {
